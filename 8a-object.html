@@ -25,8 +25,14 @@
   playGame('scissors');
 
   ">Scissors</button>
+  <button onclick="score.wins=0; score.losses=0; score.draws=0">Reset Score</button>
 
   <script>
+    const score = {
+      wins: 0,
+      losses: 0,
+      draws: 0
+    }
      function pickComputerMove () {
        const randomNumber = Math.random();
           let computerMove = '';
@@ -51,9 +57,14 @@
          else if (result === 'Draw') {
          score.draws += 1;
        }
-       alert (`you picked ${playerMove}. computer picked ${computerMove}. ${result}`);
+       alert (`you picked ${playerMove}. computer picked ${computerMove}. ${result}
+wins: ${score.wins} , losses: ${score.losses}, draws: ${score.draws}`);
         
       }
+      function resetScore() {
+
+      }
+    
    
 </script>
   </body>

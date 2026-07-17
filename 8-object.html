@@ -14,6 +14,29 @@
     console.log(product.price); 
     product.price = '1200';
     console.log(product.price);
+
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']:'1day',
+
+      rating:{
+        stars:4.5,
+        count:87
+      },
+      fun: function f1() {
+        console.log('function inside object');
+      }
+    };
+    
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product['name']);
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.stars);
+      product2.fun();
+      console.log(JSON.stringify(product2));
+      const jasonstring =JSON.stringify(product2)
+      JSON.parse(jasonstring);
     </script>
   </body>
 </html>
