@@ -32,7 +32,9 @@
       wins: 0,
       losses: 0,
       draws: 0
-    }
+    };
+   console.log(localStorage.getItem('message'));
+
      function pickComputerMove () {
        const randomNumber = Math.random();
           let computerMove = '';
@@ -57,6 +59,8 @@
          else if (result === 'Draw') {
          score.draws += 1;
        }
+       localStorage.setItem('message','hello');
+
        alert (`you picked ${playerMove}. computer picked ${computerMove}. ${result}
 wins: ${score.wins} , losses: ${score.losses}, draws: ${score.draws}`);
         
