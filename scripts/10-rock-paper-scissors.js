@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-  </head>
-  <body>
-    
-    
-    <p>Rock Paper Scissors</p>
-  <button onclick="
-   playGame('rock');
- 
- 
-  ">Rock</button>
-
- <button onclick="
-  
-  playGame('paper');
-
- 
-  ">Paper</button>
-
-<button onclick="
-
-  playGame('scissors');
-
-  ">Scissors</button>
-<p class="js-result"></p>
-<p class="js-moves"></p>
-
-<p class="js-score"></p>
-
-  <button onclick="score.wins=0;
-   score.losses=0; 
-   score.draws=0
-   localStorage.removeItem('score');
-   updateScoreElement()">Reset Score</button>
-
-  <script>
-    let score =JSON.parse(localStorage.getItem('score'))|| {
+let score =JSON.parse(localStorage.getItem('score'))|| {
           wins: 0,
           losses: 0,
           draws: 0
@@ -85,7 +46,10 @@
      updateScoreElement();
      document.querySelector('.js-result').innerHTML = result;
 
-          document.querySelector('.js-moves').innerHTML = `you ${playerMove} - ${computerMove}computer `;
+    document.querySelector('.js-moves').innerHTML = `you
+  <img src="${playerMove}-emoji.png" class="i1" >
+  <img src="${computerMove}-emoji.png"class="i1">
+  computer `;
 
       
         
@@ -94,7 +58,3 @@
          document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Draws: ${score.draws}`;
 }
     
-
-</script>
-  </body>
-  </html> 
