@@ -2,17 +2,22 @@
 <html>
   <head>
     <title>Todo List</title>
-
+ <link rel="stylesheet" href="11.css">
     
   </head>
   <body> 
     <p>Todo List Practice 1</p>
-    <input placeholder="Todo name">
+    <div class="d1">
+    <input placeholder="Todo name"
+    class="js-todo">
+    <input type="date"
+    class="js-due-date">
     <button onclick="
     addTodo()"
-    class="js-todo"
+    
     >Add</button>
-    <P Class="js-a"></P>
+  </div>
+    <div Class="js-a todo-grid"></div >
 
 
   <script src="scripts/11-todo.js">
