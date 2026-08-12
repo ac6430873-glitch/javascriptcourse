@@ -1,0 +1,27 @@
+ body{
+        background-color: black;
+        font-family: Arial;
+        
+      }
+      .rps{
+        height: 100px;
+        width: 100px;
+        border-radius: 400px;
+        background-color: transparent;
+        
+     border-style: solid;
+     border-color: white;
+        
+      }
+      .i1{
+        height:50px;
+        width: 50px;
+      }
+      .reset{
+        color: black;
+        background-color: white;
+        border-color: white;
+        border-style: solid;
+        padding: 8px 15px;
+        cursor: pointer;
+      }
