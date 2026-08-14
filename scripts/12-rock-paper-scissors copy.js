@@ -22,6 +22,22 @@ let score =JSON.parse(localStorage.getItem('score'))|| {
           let computerMove = '';
     if (randomNumber >= 0 && randomNumber < 1/3){computerMove = 'rock'} else if (randomNumber >= 1/3 && randomNumber < 2/3 ) { computerMove = 'paper'} else if (randomNumber >= 2/3 && randomNumber < 1) { computerMove = 'scissors'};return computerMove;
    }
+   
+   let isAutoPlaying = false;
+let intervalId;
+   function autoPlay(){
+    if(!isAutoPlaying){
+       intervalId = setInterval(function(){
+      const playerMove = pickComputerMove
+      playGame(PlayerMove);
+    },1000);
+    isAutoPlaying = true;
+    }else{
+      clearInterval(intervalId)
+    };
+    isAutoPlaying = false;
+   }
+
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();

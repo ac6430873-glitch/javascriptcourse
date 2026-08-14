@@ -1,0 +1,34 @@
+body{
+  font-style:Arial;
+}
+.todo-grid,.d1{
+  display:grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+.d1{
+  margin-bottom: 10px;
+}
+.todo, .date{
+  
+  font-size: 15px;
+  padding: 6px;
+}
+.add{
+  font-size: 15px;
+  padding: 6px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  cursor: pointer;
+}
+.delete{
+  font-size: 15px;
+  padding: 6px;
+  color: white;
+  background-color: #f44336;
+  border: none;
+  cursor: pointer;
+}
