@@ -5,7 +5,11 @@
     
   </head>
   <body>
+    <button class="js-button" onclick="" ></button>
   <script>
+   const buttonElement = document.querySelector('.js-button');
+buttonElement.addEventListener('click')
+
     /*
     function greeting(){
       console.log('hello');
@@ -41,14 +45,36 @@ setTimeout(function(){
    setInterval(function(){
     console.log('interval');
    },2000);*/
+   /*
    [
     'make dinner',
+    'wash dishes',
     'watch youtube',
     
    ].forEach(function(value){
+    if(value==='wash dishes'){
+      return;
+    }
+
     cosnole.log(value)
    })
+   const regularFunction=function(param,param2){
+    console.log('hello');
+    return 5;
+   }
 
-  </script>
-</body>
-</html> 
+   const arrowFunction =()=>{
+    console.log('hello');
+    return 5;
+   }
+   arrowFunction();
+   const onepraram = (param)=>{
+    console.log(param+1)
+   };
+   oneparm(2);
+   const oneLine = ()=>{
+    return 2+3
+    console.log(online())};  */                           
+    </script>
+    </body>
+    </html>
