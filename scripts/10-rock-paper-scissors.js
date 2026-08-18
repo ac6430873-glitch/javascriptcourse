@@ -17,6 +17,19 @@ let score =JSON.parse(localStorage.getItem('score'))|| {
       }
     */
 
+       const rockButton = document.querySelector('.js-scissors-button')
+   rockButton.addEventListener('click',() => {
+     playGame('rock')
+   });
+    const rockButton = document.querySelector('.js-rock-button')
+   rockButton.addEventListener('click',() => {
+     playGame('scissors')
+   });
+    const rockButton = document.querySelector('.js-paper-button')
+   rockButton.addEventListener('click',() => {
+     playGame('paper')
+   });
+
      function pickComputerMove () {
        const randomNumber = Math.random();
           let computerMove = '';
@@ -57,4 +70,15 @@ let score =JSON.parse(localStorage.getItem('score'))|| {
       function updateScoreElement() {
          document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Draws: ${score.draws}`;
 }
-    
+  
+document.addEventListener('keydown', function(event) {
+  console.log(event.key);
+
+  if (event.key === 'r') {
+    playGame('rock');
+  } else if (event.key === 'p') {
+    playGame('paper');
+  } else if (event.key === 's') {
+    playGame('scissors');
+  }
+});

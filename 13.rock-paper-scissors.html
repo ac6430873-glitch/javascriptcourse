@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles/12rock-paper-scissors copy.css"> 
+    <link rel="stylesheet" href="styles/12rock-paper-scissors copy.css">
   </head>
+
   <body>
-    
-    
-    <p style="color: white;
-    font-size:30px;
-    font-weight: bold;">Rock Paper Scissors</p>
-  <button onclick="
-   playGame('rock');
- "class="rps"><img src="rock-emoji.png"
- class="i1"></button>
 
- <button onclick="
-  playGame('paper');"
-  class="rps"><img src="paper-emoji.png" class="i1"></button>
+    <p style="
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+    ">
+      Rock Paper Scissors
+    </p>
 
-<button onclick="
-playGame('scissors');"
-class="rps"><img src="scissors-emoji.png" class="i1"></button>
+    <button onclick="playGame('rock');" class="rps js-rock-button">
+      <img src="rock-emoji.png" class="i1">
+    </button>
 
-<p class="js-result" style="color:white;"></p>
+    <button onclick="playGame('paper');" class="rps js-paper-button">
+      <img src="paper-emoji.png" class="i1">
+    </button>
 
-<p class="js-moves"style="color:white;">you
-  <img src="paper-emoji.png" class="i1" >
-  <img src="rock-emoji.png"class="i1">
-  computer
+    <button onclick="playGame('scissors');" class="rps js-scissors-button">
+      <img src="scissors-emoji.png" class="i1">
+    </button>
 
-</p>
+    <p class="js-result" style="color: white;"></p>
 
-<p class="js-score" style="color: white;
-margin-top: 60px;"></p>
+    <p class="js-moves" style="color: white;">
+      Make a move!
+    </p>
 
-  <button onclick="score.wins=0;
-   score.losses=0; 
-   score.draws=0
-   localStorage.removeItem('score');
-   updateScoreElement()"
-   class="reset">Reset Score</button>
- 
-  <button onclick="autoplay();">Auto play</button>
+    <p class="js-score" style="
+      color: white;
+      margin-top: 60px;
+    "></p>
 
-  <script src="scripts/12-rock-paper-scissors.js"></script>
+    <button onclick="resetScore();" class="reset">
+      Reset Score
+    </button>
 
-</body>
-</html> 
+    <button onclick="autoPlay();" class="auto-play">
+      Auto Play
+    </button>
+
+    <script src="./scripts/12-rock-paper-scissors copy.js"></script>
+
+  </body>
+</html>
